@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discover Harrisburg | Family Recruitment Shabbaton</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: { 800: '#1e293b', 900: '#0f172a' },
+                        gold: { 500: '#d97706', 600: '#b45309' },
+                        forest: { 800: '#064e3b', 900: '#022c22' }
+                    },
+                    fontFamily: { sans: ['Inter', 'sans-serif'] }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .glass-header { background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased selection:bg-amber-100 selection:text-amber-900">
+    <div class="bg-gradient-to-r from-amber-600 via-amber-700 to-amber-800 text-white text-xs sm:text-sm py-2 px-4 text-center font-medium shadow-inner flex items-center justify-center gap-2">
+        <span class="bg-amber-950/40 text-amber-200 text-[10px] uppercase font-bold tracking-wider px-2 py-0.5 rounded-full border border-amber-400/30">Limited Slots</span>
+        <span>Exclusive Pilot Shabbaton: Only 20 Families Selected for Full Subsidized Experience!</span>
+        <a href="#apply" class="underline font-bold hover:text-amber-200 ml-1 hidden sm:inline">Apply Now &rarr;</a>
+    </div>
+    <header class="sticky top-0 z-50 glass-header border-b border-slate-200/80 transition-all duration-200 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <a href="#" class="flex items-center gap-3 group">
+                    <div class="w-11 h-11 rounded-xl bg-gradient-to-tr from-blue-900 via-slate-800 to-amber-600 flex items-center justify-center text-white shadow-md shadow-blue-900/20 group-hover:scale-105 transition-transform duration-200">
+                        <i class="fa-solid font-bold text-amber-400 text-xl fa-star-of-david"></i>
+                    </div>
+                    <div class="flex flex-col">
+                        <span class="text-xl font-extrabold tracking-tight text-slate-900 leading-none group-hover:text-amber-600 transition-colors">Discover <span class="text-amber-600">Harrisburg</span></span>
+                        <span class="text-[11px] font-semibold text-slate-500 uppercase tracking-widest mt-1">Community Shabbaton</span>
+                    </div>
+                </a>
+                <nav class="hidden lg:flex items-center space-x-1 xl:space-x-2">
+                    <a href="#why-harrisburg" class="px-3 py-2 text-sm font-semibold text-slate-700 hover:text-amber-600 rounded-lg hover:bg-slate-100/80 transition-all">Why Harrisburg</a>
+                    <a href="#aishel-campus" class="px-3 py-2 text-sm font-semibold text-slate-700 hover:text-amber-600 rounded-lg hover:bg-slate-100/80 transition-all">The Aishel Campus</a>
+                    <a href="#itinerary" class="px-3 py-2 text-sm font-semibold text-slate-700 hover:text-amber-600 rounded-lg hover:bg-slate-100/80 transition-all">Weekend Itinerary</a>
+                    <a href="#cost-calculator" class="px-3 py-2 text-sm font-semibold text-slate-700 hover:text-amber-600 rounded-lg hover:bg-slate-100/80 transition-all">Cost Calculator</a>
+                </nav>
+                <div class="flex items-center gap-3">
+                    <a href="#apply" class="hidden sm:inline-flex items-center justify-center px-5 py-2.5 rounded-xl text-sm font-bold text-white bg-gradient-to-r from-amber-600 to-amber-700 hover:from-amber-700 hover:to-amber-800 shadow-md shadow-amber-600/20 hover:shadow-lg hover:shadow-amber-600/30 active:scale-95 transition-all">Apply for Shabbaton</a>
+                    <button id="mobile-menu-btn" type="button" class="lg:hidden p-2.5 rounded-xl text-slate-700 hover:text-slate-900 hover:bg-slate-100 focus:outline-none focus:ring-2 focus:ring-amber-500" aria-label="Toggle Navigation Menu">
+                        <i class="fa-solid fa-bars text-xl" id="menu-icon"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden lg:hidden border-b border-slate-200 bg-white/95 backdrop-blur-lg px-4 pt-2 pb-6 space-y-2 shadow-xl">
+            <a href="#why-harrisburg" class="mobile-nav-link block px-4 py-3 rounded-xl text-base font-semibold text-slate-700 hover:bg-slate-100 hover:text-amber-600">Why Harrisburg</a>
+            <a href="#aishel-campus" class="mobile-nav-link block px-4 py-3 rounded-xl text-base font-semibold text-slate-700 hover:bg-slate-100 hover:text-amber-600">The Aishel Campus</a>
+            <a href="#itinerary" class="mobile-nav-link block px-4 py-3 rounded-xl text-base font-semibold text-slate-700 hover:bg-slate-100 hover:text-amber-600">Weekend Itinerary</a>
+            <a href="#cost-calculator" class="mobile-nav-link block px-4 py-3 rounded-xl text-base font-semibold text-slate-700 hover:bg-slate-100 hover:text-amber-600">Cost Calculator</a>
+            <div class="pt-2">
+                <a href="#apply" class="mobile-nav-link block w-full text-center py-3.5 px-4 rounded-xl font-bold text-white bg-amber-600 hover:bg-amber-700 shadow-md">Apply for Shabbaton</a>
+            </div>
+        </div>
+    </header>
+    <section class="relative bg-gradient-to-b from-slate-900 via-slate-800 to-slate-900 text-white overflow-hidden py-16 lg:py-24">
+        <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#d97706_1px,transparent_1px)] [background-size:16px_16px]"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-400 text-xs sm:text-sm font-semibold">
+                        <i class="fa-solid fa-calendar-check"></i><span>Pilot Shabbaton Experience &bull; Limited Subsidized Spots</span>
+                    </div>
+                    <h1 class="text-3xl sm:text-5xl lg:text-6xl font-black tracking-tight leading-tight text-white">Bring Your Family to a <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-amber-300 to-amber-500">Thriving Jewish Future</span> in Harrisburg</h1>
+                    <p class="text-base sm:text-xl text-slate-300 max-w-2xl mx-auto lg:mx-0 font-normal leading-relaxed">Experience an all-inclusive, fully catered recruitment weekend. Discover affordable housing, flourishing Orthodox infrastructure, major career opportunities, and a vibrant community warm enough to call home.</p>
+                    <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-4">
+                        <a href="#apply" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-amber-600 hover:bg-amber-500 text-white font-bold text-lg shadow-xl shadow-amber-600/25 hover:shadow-amber-500/30 transition-all text-center">Submit Your Application</a>
+                        <a href="#aishel-campus" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-slate-800 hover:bg-slate-700 border border-slate-700 text-slate-200 font-semibold text-lg transition-all text-center flex items-center justify-center gap-2"><i class="fa-solid fa-compass text-amber-400"></i> Explore Aishel Campus</a>
+                    </div>
+                    <div class="pt-8 border-t border-slate-700/60 grid grid-cols-2 sm:grid-cols-4 gap-4 text-center lg:text-left">
+                        <div><p class="text-2xl font-black text-amber-400">20</p><p class="text-xs text-slate-400 font-medium">Selected Families</p></div>
+                        <div><p class="text-2xl font-black text-amber-400">60-Acre</p><p class="text-xs text-slate-400 font-medium">Retreat Grounds</p></div>
+                        <div><p class="text-2xl font-black text-amber-400">Top 10</p><p class="text-xs text-slate-400 font-medium">Healthcare & State Jobs</p></div>
+                        <div><p class="text-2xl font-black text-amber-400">100%</p><p class="text-xs text-slate-400 font-medium">Subsidized Weekend</p></div>
+                    </div>
+                </div>
+                <div class="lg:col-span-5 relative">
+                    <div class="relative mx-auto max-w-md lg:max-w-none">
+                        <div class="absolute -inset-1 bg-gradient-to-r from-amber-500 to-amber-700 rounded-2xl blur opacity-30"></div>
+                        <div class="relative bg-slate-800 rounded-2xl overflow-hidden border border-slate-700 shadow-2xl">
+                            <img src="https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&w=800&q=80" alt="Family and Community Gathering" class="w-full h-80 object-cover object-center" onerror="this.src='https://placehold.co/800x600/1e293b/ffffff?text=Community+Shabbaton'">
+                            <div class="p-6 bg-gradient-to-t from-slate-900 to-slate-800">
+                                <div class="flex items-center justify-between mb-2"><span class="text-xs font-bold text-amber-400 uppercase tracking-widest">Shabbaton Highlight</span><span class="text-xs text-slate-400"><i class="fa-solid fa-location-dot text-amber-500 mr-1"></i>New Bloomfield, PA</span></div>
+                                <h3 class="text-lg font-bold text-white mb-2">Aishel Campus Retreat</h3>
+                                <p class="text-xs text-slate-300">Enjoy full catered kosher dining, comfortable suites, and outdoor recreational grounds while networking with local job recruiters and community leaders.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="why-harrisburg" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-amber-600 text-sm font-extrabold uppercase tracking-widest">Unbeatable Quality of Life</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-2">Why Families Are Choosing Harrisburg</h2>
+                <p class="text-slate-600 mt-4 text-base sm:text-lg">Enjoy a warm, integrated Orthodox community without the crushing financial stress of major metropolitan hubs.</p>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="bg-slate-50 p-8 rounded-2xl border border-slate-200/80 hover:shadow-xl transition-all duration-300 flex flex-col justify-between"><div><div class="w-14 h-14 rounded-xl bg-amber-100 text-amber-600 flex items-center justify-center text-2xl font-bold mb-6"><i class="fa-solid fa-house-circle-check"></i></div><h3 class="text-xl font-bold text-slate-900 mb-3">Affordable Housing</h3><p class="text-slate-600 text-sm leading-relaxed">Own a spacious 4-5 bedroom single-family home with a yard for a fraction of NY or NJ prices. Average home prices remain under $380,000 in desirable neighborhoods.</p></div><div class="mt-6 pt-4 border-t border-slate-200 text-xs font-semibold text-amber-700">Up to 60% lower mortgage costs</div></div>
+                <div class="bg-slate-50 p-8 rounded-2xl border border-slate-200/80 hover:shadow-xl transition-all duration-300 flex flex-col justify-between"><div><div class="w-14 h-14 rounded-xl bg-blue-100 text-blue-600 flex items-center justify-center text-2xl font-bold mb-6"><i class="fa-solid fa-user-doctor"></i></div><h3 class="text-xl font-bold text-slate-900 mb-3">Healthcare & Gov Jobs</h3><p class="text-slate-600 text-sm leading-relaxed">Thriving job markets with major health networks (Penn State Health, UPMC) and state government positions, IT centers, and remote-work friendly infrastructure.</p></div><div class="mt-6 pt-4 border-t border-slate-200 text-xs font-semibold text-blue-700">High salary-to-living-cost ratio</div></div>
+                <div class="bg-slate-50 p-8 rounded-2xl border border-slate-200/80 hover:shadow-xl transition-all duration-300 flex flex-col justify-between"><div><div class="w-14 h-14 rounded-xl bg-emerald-100 text-emerald-600 flex items-center justify-center text-2xl font-bold mb-6"><i class="fa-solid fa-torah"></i></div><h3 class="text-xl font-bold text-slate-900 mb-3">Rich Jewish Life</h3><p class="text-slate-600 text-sm leading-relaxed">Active Shuls (Kesher Israel), Silver Academy day school, Eruv, Mikvah, Kosher food access, and supportive, welcoming neighbors who know your name.</p></div><div class="mt-6 pt-4 border-t border-slate-200 text-xs font-semibold text-emerald-700">Complete Orthodox Infrastructure</div></div>
+                <div class="bg-slate-50 p-8 rounded-2xl border border-slate-200/80 hover:shadow-xl transition-all duration-300 flex flex-col justify-between"><div><div class="w-14 h-14 rounded-xl bg-purple-100 text-purple-600 flex items-center justify-center text-2xl font-bold mb-6"><i class="fa-solid fa-plane-departure"></i></div><h3 class="text-xl font-bold text-slate-900 mb-3">Prime Location</h3><p class="text-slate-600 text-sm leading-relaxed">Convenient access to Harrisburg International Airport (MDT), Amtrak, and an easy drive to Philadelphia (1.5 hrs), Baltimore (1.5 hrs), and NYC (3 hrs).</p></div><div class="mt-6 pt-4 border-t border-slate-200 text-xs font-semibold text-purple-700">Seamless Connectivity</div></div>
+            </div>
+        </div>
+    </section>
+    <section id="aishel-campus" class="py-20 bg-slate-900 text-white relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-6 space-y-6">
+                    <span class="inline-block px-3 py-1 rounded-full bg-amber-500/20 text-amber-400 text-xs font-extrabold uppercase tracking-widest border border-amber-500/30">Shabbaton Headquarters</span>
+                    <h2 class="text-3xl sm:text-4xl font-black tracking-tight text-white">The Aishel Campus: A Scenic 60-Acre Retreat</h2>
+                    <p class="text-slate-300 text-base sm:text-lg leading-relaxed">Nestled in beautiful New Bloomfield, PA, the historic Aishel Campus serves as the perfect host venue for our recruitment weekend. Set on 60 picturesque, peaceful acres with historic grounds established in 1836, Aishel provides modern amenities paired with natural serenity.</p>
+                    <div class="grid sm:grid-cols-2 gap-4 pt-4">
+                        <div class="flex items-start gap-3 p-3 rounded-xl bg-slate-800/80 border border-slate-700"><i class="fa-solid fa-hotel text-amber-400 text-xl mt-1"></i><div><h4 class="font-bold text-sm text-white">300+ Guest Capacity</h4><p class="text-xs text-slate-400">Comfortable private suites & family dorms</p></div></div>
+                        <div class="flex items-start gap-3 p-3 rounded-xl bg-slate-800/80 border border-slate-700"><i class="fa-solid fa-utensils text-amber-400 text-xl mt-1"></i><div><h4 class="font-bold text-sm text-white">Commercial Kosher Kitchen</h4><p class="text-xs text-slate-400">Full Glatt Kosher catering throughout</p></div></div>
+                        <div class="flex items-start gap-3 p-3 rounded-xl bg-slate-800/80 border border-slate-700"><i class="fa-solid fa-volleyball text-amber-400 text-xl mt-1"></i><div><h4 class="font-bold text-sm text-white">Sports & Recreation</h4><p class="text-xs text-slate-400">Basketball courts, pool & fire pit</p></div></div>
+                        <div class="flex items-start gap-3 p-3 rounded-xl bg-slate-800/80 border border-slate-700"><i class="fa-solid fa-tree text-amber-400 text-xl mt-1"></i><div><h4 class="font-bold text-sm text-white">60 Historic Acres</h4><p class="text-xs text-slate-400">Established 1836 in New Bloomfield, PA</p></div></div>
+                    </div>
+                </div>
+                <div class="lg:col-span-6 grid grid-cols-2 gap-4">
+                    <div class="space-y-4">
+                        <div class="rounded-2xl overflow-hidden shadow-xl border border-slate-700"><img src="https://images.unsplash.com/photo-1510798831971-661eb04b3739?auto=format&fit=crop&w=600&q=80" alt="Aishel Campus Grounds" class="w-full h-48 object-cover hover:scale-105 transition-transform duration-300" onerror="this.src='https://placehold.co/600x400/1e293b/ffffff?text=Aishel+Campus+Grounds'"></div>
+                        <div class="rounded-2xl overflow-hidden shadow-xl border border-slate-700"><img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=600&q=80" alt="Centennial Dining Hall" class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300" onerror="this.src='https://placehold.co/600x400/1e293b/ffffff?text=Centennial+Dining+Hall'"></div>
+                    </div>
+                    <div class="space-y-4 pt-6">
+                        <div class="rounded-2xl overflow-hidden shadow-xl border border-slate-700"><img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=600&q=80" alt="Aishel Accommodations" class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300" onerror="this.src='https://placehold.co/600x400/1e293b/ffffff?text=Accommodations'"></div>
+                        <div class="rounded-2xl overflow-hidden shadow-xl border border-slate-700 bg-amber-600/20 p-6 flex flex-col justify-center text-center border-amber-500/30"><p class="text-2xl font-black text-amber-400">1836</p><p class="text-xs text-slate-300 font-semibold uppercase mt-1">Historic Grounds</p><p class="text-[11px] text-slate-400 mt-2">Preserved charm meets modern Shabbaton amenities</p></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="itinerary" class="py-20 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16"><span class="text-amber-600 text-sm font-extrabold uppercase tracking-widest">Shabbaton Schedule</span><h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-2">Your Weekend Experience</h2><p class="text-slate-600 mt-4 text-base sm:text-lg">A carefully crafted itinerary balancing community interaction, career networking, housing exploration, and relaxing Shabbat meals.</p></div>
+            <div class="flex justify-center mb-10 overflow-x-auto pb-2"><div class="inline-flex p-1.5 rounded-xl bg-slate-200/80 max-w-full"><button class="itinerary-tab active-tab px-5 py-3 rounded-lg text-sm font-bold transition-all text-amber-700 bg-white shadow-sm" data-target="day1">Thursday Evening</button><button class="itinerary-tab px-5 py-3 rounded-lg text-sm font-bold text-slate-600 hover:text-slate-900 transition-all" data-target="day2">Friday Job & Community Tour</button><button class="itinerary-tab px-5 py-3 rounded-lg text-sm font-bold text-slate-600 hover:text-slate-900 transition-all" data-target="day3">Shabbat Immersion</button><button class="itinerary-tab px-5 py-3 rounded-lg text-sm font-bold text-slate-600 hover:text-slate-900 transition-all" data-target="day4">Sunday Housing Session</button></div></div>
+            <div class="max-w-4xl mx-auto">
+                <div id="day1" class="tab-panel space-y-4"><div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm flex items-start gap-4"><div class="px-3 py-2 bg-amber-100 text-amber-800 rounded-lg text-xs font-bold whitespace-nowrap">5:00 PM</div><div><h4 class="font-bold text-slate-900 text-lg">Check-in at Aishel Campus</h4><p class="text-slate-600 text-sm mt-1">Settle into your private family suite and enjoy light refreshments in the welcome lounge.</p></div></div><div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm flex items-start gap-4"><div class="px-3 py-2 bg-amber-100 text-amber-800 rounded-lg text-xs font-bold whitespace-nowrap">7:00 PM</div><div><h4 class="font-bold text-slate-900 text-lg">Welcome BBQ & Meet the Community Leaders</h4><p class="text-slate-600 text-sm mt-1">Casual, delicious Glatt Kosher BBQ dinner with local rabbis, community organizers, and current Harrisburg residents.</p></div></div></div>
+                <div id="day2" class="tab-panel hidden space-y-4"><div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm flex items-start gap-4"><div class="px-3 py-2 bg-amber-100 text-amber-800 rounded-lg text-xs font-bold whitespace-nowrap">9:00 AM</div><div><h4 class="font-bold text-slate-900 text-lg">Community Infrastructure Tour</h4><p class="text-slate-600 text-sm mt-1">Guided visits to the Silver Academy day school, Kesher Israel Shul, Mikvah, local Eruv boundaries, and kosher grocery options.</p></div></div><div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm flex items-start gap-4"><div class="px-3 py-2 bg-amber-100 text-amber-800 rounded-lg text-xs font-bold whitespace-nowrap">1:00 PM</div><div><h4 class="font-bold text-slate-900 text-lg">Career & Employer Networking Lunch</h4><p class="text-slate-600 text-sm mt-1">Meet with recruiters from Penn State Health, UPMC, Commonwealth of PA state departments, and local business leaders.</p></div></div></div>
+                <div id="day3" class="tab-panel hidden space-y-4"><div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm flex items-start gap-4"><div class="px-3 py-2 bg-amber-100 text-amber-800 rounded-lg text-xs font-bold whitespace-nowrap">Shabbat</div><div><h4 class="font-bold text-slate-900 text-lg">Shabbat Immersion with Host Families</h4><p class="text-slate-600 text-sm mt-1">Experience classic Harrisburg hospitality with home-hosted meal options, inspiring Tefillot, Oneg, and communal Seudah Shlishit.</p></div></div></div>
+                <div id="day4" class="tab-panel hidden space-y-4"><div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm flex items-start gap-4"><div class="px-3 py-2 bg-amber-100 text-amber-800 rounded-lg text-xs font-bold whitespace-nowrap">10:00 AM</div><div><h4 class="font-bold text-slate-900 text-lg">Real Estate & Housing Q&A Session</h4><p class="text-slate-600 text-sm mt-1">Meet local realtors, view available homes in the community, discuss mortgage incentives, and plan your relocation path.</p></div></div></div>
+            </div>
+        </div>
+    </section>
+    <section id="cost-calculator" class="py-20 bg-white">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12"><span class="text-amber-600 text-sm font-extrabold uppercase tracking-widest">Financial Comparison</span><h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-2">See How Much You Could Save</h2><p class="text-slate-600 mt-3">Compare your current housing expenses against Harrisburg's realistic cost of living.</p></div>
+            <div class="bg-slate-900 text-white rounded-3xl p-6 sm:p-10 shadow-2xl border border-slate-800"><div class="grid md:grid-cols-2 gap-8 items-center"><div class="space-y-6"><div><label class="block text-xs font-bold uppercase tracking-wider text-slate-400 mb-2">Compare From Your City:</label><select id="calc-city" class="w-full bg-slate-800 border border-slate-700 rounded-xl px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-amber-500 font-semibold"><option value="nyc">New York City / Brooklyn / LI ($4,800/mo avg)</option><option value="philly">Philadelphia Suburbs ($3,200/mo avg)</option><option value="baltimore">Baltimore / Silver Spring ($3,000/mo avg)</option><option value="nj">North Jersey / Passaic ($4,200/mo avg)</option></select></div><div><div class="flex justify-between items-center mb-2"><label class="text-xs font-bold uppercase tracking-wider text-slate-400">Current Monthly Housing Cost:</label><span id="rent-value-display" class="text-amber-400 font-bold text-lg">$4,800</span></div><input type="range" id="rent-slider" min="2000" max="8000" step="100" value="4800" class="w-full h-2 bg-slate-700 rounded-lg appearance-none cursor-pointer accent-amber-500"></div><div class="p-4 rounded-xl bg-slate-800/70 border border-slate-700 text-xs text-slate-300 space-y-1"><p><i class="fa-solid fa-check text-amber-400 mr-1.5"></i> Estimated Harrisburg 4-Bed Home Housing Cost: <strong class="text-white">$1,850/mo</strong></p><p><i class="fa-solid fa-check text-amber-400 mr-1.5"></i> Average Harrisburg Property Tax: <strong class="text-white">Significantly Lower</strong></p></div></div><div class="bg-gradient-to-br from-amber-600 to-amber-800 rounded-2xl p-8 text-center text-white shadow-xl flex flex-col justify-center items-center"><span class="text-xs font-extrabold uppercase tracking-widest text-amber-100">Estimated Annual Housing Savings</span><div id="savings-display" class="text-4xl sm:text-5xl font-black my-4 tracking-tight">$35,400</div><p class="text-xs text-amber-100 max-w-xs leading-relaxed mb-6">That's money back into your family's savings, tuition, and quality of life every single year.</p><a href="#apply" class="px-6 py-3 rounded-xl bg-white text-amber-900 font-bold text-sm hover:bg-amber-50 transition-colors shadow-md">Claim Your Shabbaton Spot &rarr;</a></div></div></div>
+        </div>
+    </section>
+    <section id="apply" class="py-20 bg-slate-100">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8"><div class="bg-white rounded-3xl p-8 sm:p-12 shadow-xl border border-slate-200"><div class="text-center max-w-2xl mx-auto mb-10"><span class="px-3 py-1 bg-amber-100 text-amber-800 rounded-full text-xs font-bold uppercase tracking-wider">Pilot Shabbaton Application</span><h2 class="text-3xl font-extrabold text-slate-900 mt-3">Apply for the Recruitment Shabbaton</h2><p class="text-slate-600 text-sm mt-2">Space is strictly limited to 20 selected families for the pilot cohort. Complete this short form to begin your candidacy.</p></div><div id="form-success-message" class="hidden mb-8 p-6 bg-emerald-50 border border-emerald-200 text-emerald-900 rounded-2xl text-center space-y-3"><div class="w-12 h-12 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center mx-auto text-2xl font-bold"><i class="fa-solid fa-circle-check"></i></div><h3 class="text-xl font-bold">Application Received!</h3><p class="text-sm text-emerald-800">Thank you for applying. Our recruitment team will review your application and contact you within 48 hours for a brief intro call.</p></div><form id="shabbaton-form" class="space-y-6"><div class="grid md:grid-cols-2 gap-6"><div><label class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-2">First & Last Name *</label><input type="text" required placeholder="e.g. David & Sarah Cohen" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-amber-500 focus:border-amber-500 outline-none text-sm text-slate-900"></div><div><label class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-2">Email Address *</label><input type="email" required placeholder="david@example.com" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-amber-500 focus:border-amber-500 outline-none text-sm text-slate-900"></div></div><div class="grid md:grid-cols-2 gap-6"><div><label class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-2">Phone Number *</label><input type="tel" required placeholder="(555) 000-0000" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-amber-500 focus:border-amber-500 outline-none text-sm text-slate-900"></div><div><label class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-2">Current Location *</label><input type="text" required placeholder="e.g. Brooklyn, NY" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-amber-500 focus:border-amber-500 outline-none text-sm text-slate-900"></div></div><div class="grid md:grid-cols-2 gap-6"><div><label class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-2">Primary Career Field *</label><select required class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-amber-500 focus:border-amber-500 outline-none text-sm text-slate-900"><option value="">Select your field...</option><option value="healthcare">Healthcare / Medical</option><option value="government">Government / Public Sector</option><option value="tech">Technology / Software / IT</option><option value="education">Education / Administration</option><option value="finance">Finance / Accounting</option><option value="remote">Remote Worker (Any Field)</option><option value="other">Other</option></select></div><div><label class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-2">Potential Relocation Timeline</label><select class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-amber-500 focus:border-amber-500 outline-none text-sm text-slate-900"><option value="3months">Within 3 Months</option><option value="6months">Within 6 Months</option><option value="1year">Within 1 Year</option><option value="exploring">Just Exploring Options</option></select></div></div><div><label class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-2">Number of Family Members Attending</label><input type="text" placeholder="e.g. 2 Adults, 3 Children" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-amber-500 focus:border-amber-500 outline-none text-sm text-slate-900"></div><button type="submit" class="w-full py-4 rounded-xl bg-gradient-to-r from-amber-600 to-amber-700 hover:from-amber-700 hover:to-amber-800 text-white font-bold text-base shadow-lg shadow-amber-600/20 active:scale-98 transition-all">Submit Application for Selection</button><p class="text-center text-xs text-slate-500">Your information is confidential and will only be used for Shabbaton coordination.</p></form></div></div>
+    </section>
+    <footer class="bg-slate-900 text-slate-400 py-12 border-t border-slate-800 text-xs sm:text-sm"><div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"><div class="grid md:grid-cols-12 gap-8 items-center pb-8 border-b border-slate-800"><div class="md:col-span-6 flex items-center gap-3"><div class="w-9 h-9 rounded-lg bg-amber-600 flex items-center justify-center text-white font-bold"><i class="fa-solid fa-star-of-david text-sm"></i></div><div><p class="text-white font-bold text-base">Discover Harrisburg</p><p class="text-slate-500 text-xs">Family Recruitment Initiative</p></div></div><div class="md:col-span-6 text-left md:text-right text-slate-500 text-xs">Supported by local community development foundations & communal grant initiatives.</div></div><div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500"><p>&copy; 2026 Discover Harrisburg Initiative. All rights reserved.</p><p>Retreat Host Venue: Aishel Campus, New Bloomfield, PA (60-Acre Grounds, Est. 1836)</p></div></div></footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuBtn = document.getElementById('mobile-menu-btn'); const mobileMenu = document.getElementById('mobile-menu'); const menuIcon = document.getElementById('menu-icon'); const mobileLinks = document.querySelectorAll('.mobile-nav-link');
+            if (menuBtn && mobileMenu) { menuBtn.addEventListener('click', () => { const isHidden = mobileMenu.classList.contains('hidden'); if (isHidden) { mobileMenu.classList.remove('hidden'); menuIcon.classList.remove('fa-bars'); menuIcon.classList.add('fa-xmark'); } else { mobileMenu.classList.add('hidden'); menuIcon.classList.remove('fa-xmark'); menuIcon.classList.add('fa-bars'); } }); mobileLinks.forEach(link => { link.addEventListener('click', () => { mobileMenu.classList.add('hidden'); menuIcon.classList.remove('fa-xmark'); menuIcon.classList.add('fa-bars'); }); }); }
+            const tabs = document.querySelectorAll('.itinerary-tab'); const panels = document.querySelectorAll('.tab-panel');
+            tabs.forEach(tab => { tab.addEventListener('click', () => { const target = tab.getAttribute('data-target'); tabs.forEach(t => { t.classList.remove('active-tab', 'text-amber-700', 'bg-white', 'shadow-sm'); t.classList.add('text-slate-600'); }); tab.classList.add('active-tab', 'text-amber-700', 'bg-white', 'shadow-sm'); tab.classList.remove('text-slate-600'); panels.forEach(panel => { if (panel.id === target) { panel.classList.remove('hidden'); } else { panel.classList.add('hidden'); } }); }); });
+            const rentSlider = document.getElementById('rent-slider'); const rentDisplay = document.getElementById('rent-value-display'); const citySelect = document.getElementById('calc-city'); const savingsDisplay = document.getElementById('savings-display'); const HARRISBURG_ESTIMATED_RENT = 1850;
+            function calculateSavings() { if (!rentSlider || !rentDisplay || !savingsDisplay) return; const currentHousingCost = parseInt(rentSlider.value); rentDisplay.textContent = '$' + currentHousingCost.toLocaleString(); const monthlySavings = Math.max(0, currentHousingCost - HARRISBURG_ESTIMATED_RENT); const annualSavings = monthlySavings * 12; savingsDisplay.textContent = '$' + annualSavings.toLocaleString(); }
+            if (citySelect && rentSlider) { citySelect.addEventListener('change', (e) => { const city = e.target.value; if (city === 'nyc') rentSlider.value = 4800; else if (city === 'philly') rentSlider.value = 3200; else if (city === 'baltimore') rentSlider.value = 3000; else if (city === 'nj') rentSlider.value = 4200; calculateSavings(); }); rentSlider.addEventListener('input', calculateSavings); calculateSavings(); }
+            const form = document.getElementById('shabbaton-form'); const successMsg = document.getElementById('form-success-message');
+            if (form && successMsg) { form.addEventListener('submit', (e) => { e.preventDefault(); form.classList.add('hidden'); successMsg.classList.remove('hidden'); successMsg.scrollIntoView({ behavior: 'smooth', block: 'center' }); }); }
+        });
+    </script>
+</body>
+</html>
